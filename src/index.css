@@ -3,3 +3,16 @@
 body {
   font-family: 'JetBrains Mono', monospace;
 }
+
+@keyframes hint-pulse {
+  0%, 100% {
+    color: #6b7280;
+  }
+  50% {
+    color: #4ade80;
+  }
+}
+
+.animate-hint {
+  animation: hint-pulse 2s ease-in-out infinite;
+}
