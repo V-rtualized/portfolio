@@ -87,7 +87,7 @@ export default function TerminalPortfolio() {
         <Command command="fastfetch">
           <StatCard value="3+" label="years experience as a full stack web developer" color="yellow" wide />
           <div className="mt-4 grid grid-cols-3 gap-4">
-            <StatCard value="100k+" label="users reached*" color="green" />
+            <StatCard value="200k+" label="users reached*" color="green" />
             <StatCard value="4.5k" label="peak DAU*" color="blue" />
             <StatCard value="1.4k" label="peak concurrent*" color="purple" />
           </div>
