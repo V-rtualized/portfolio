@@ -1,6 +1,6 @@
 export function JsonBlock({ children }) {
   return (
-    <div className="bg-gray-900 rounded-lg p-4 border border-gray-800 text-sm font-mono">
+    <div className="bg-gray-900 rounded-lg p-4 border border-gray-800 text-sm font-mono overflow-x-auto">
       <div className="text-gray-300">{"{"}</div>
       <div className="ml-4">{children}</div>
       <div className="text-gray-300">{"}"}</div>

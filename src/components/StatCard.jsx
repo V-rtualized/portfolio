@@ -8,9 +8,9 @@ const colorClasses = {
 export default function StatCard({ value, label, color = 'green', wide = false }) {
   if (wide) {
     return (
-      <div className="bg-gray-900 rounded-lg p-4 border border-gray-800 flex items-center justify-center">
+      <div className="bg-gray-900 rounded-lg p-4 border border-gray-800 flex flex-col sm:flex-row items-center justify-center text-center sm:text-left">
         <span className={`text-3xl font-bold ${colorClasses[color]}`}>{value}</span>
-        <span className="text-gray-500 text-lg ml-3">{label}</span>
+        <span className="text-gray-500 text-lg sm:ml-3">{label}</span>
       </div>
     );
   }

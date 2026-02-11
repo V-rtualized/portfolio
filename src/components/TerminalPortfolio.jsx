@@ -86,7 +86,7 @@ export default function TerminalPortfolio() {
         {/* Stats Banner */}
         <Command command="fastfetch">
           <StatCard value="3+" label="years experience as a full stack web developer" color="yellow" wide />
-          <div className="mt-4 grid grid-cols-3 gap-4">
+          <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4">
             <StatCard value="200k+" label="users reached*" color="green" />
             <StatCard value="4.5k" label="peak DAU*" color="blue" />
             <StatCard value="1.4k" label="peak concurrent*" color="purple" />
@@ -99,7 +99,7 @@ export default function TerminalPortfolio() {
         {/* Experience Timeline */}
         <Command command="history | grep software development">
           <div className="space-y-2 text-sm">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 flex-wrap">
               <TimelineEntry
                 years="2020-2025"
                 description="BSc Computer Science · University of Victoria"
@@ -112,17 +112,24 @@ export default function TerminalPortfolio() {
                 onToggle={() => handleEntryToggle(0)}
               />
               {showHint && (
-                <span className="text-xs italic whitespace-nowrap animate-hint">
-                  {"<-- click to learn more"}
-                </span>
+                <>
+                  <span className="text-xs italic animate-hint hidden sm:inline">
+                    {"<-- click to learn more"}
+                  </span>
+                  <span className="text-xs italic animate-hint sm:hidden">
+                    {"^ tap to expand"}
+                  </span>
+                </>
               )}
             </div>
             <TimelineEntry
               years="2022-2024"
               description="Software Developer & IT · TIPS Personnel"
               details={[
-                'Built web and mobile applications from non-technical specs, owning projects from requirements through deployment.',
-                'Architected cloud infrastructure for scalability; migrated legacy databases to PostgreSQL.'
+                'Led migration from monolithic architecture to microservices, modernizing the web dashboard and enabling faster feature development cycles.',
+                'Developed a companion mobile application in React Native that interfaces with the modernized backend and database.',
+                'Redesigned database layer, migrating from legacy SQL to PostgreSQL with improved schema design.',
+                'Collaborated with non-technical stakeholders to translate business requirements into technical specifications.'
               ]}
               expanded={expandedEntry === 1}
               onToggle={() => handleEntryToggle(1)}
@@ -131,8 +138,9 @@ export default function TerminalPortfolio() {
               years="2022-2022"
               description="Software Developer · Fly and Fetch"
               details={[
-                'Developed React/Node.js applications in a Docker-based monorepo with fast Agile iteration cycles.',
-                'Collaborated with small team to ship MVPs for new business concepts.'
+                'Built web applications in React and Node.js within a monorepo and Docker-based development environment.',
+                'Excelled in a fast-paced, iterative development environment leveraging Agile methodologies.',
+                'Collaborated with a small team to construct modern software for new business concepts.'
               ]}
               expanded={expandedEntry === 2}
               onToggle={() => handleEntryToggle(2)}
@@ -141,7 +149,8 @@ export default function TerminalPortfolio() {
               years="2021-2022"
               description="Chief Developer · Jikoo"
               details={[
-                'Led development of React Native mobile app with cloud backend, translating non-technical requirements into scalable architecture.'
+                'Built mobile applications using React Native and cloud technologies.',
+                'Collaborated with non-technical team members to efficiently design and develop scalable software.'
               ]}
               expanded={expandedEntry === 3}
               onToggle={() => handleEntryToggle(3)}
